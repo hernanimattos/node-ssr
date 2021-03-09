@@ -21,12 +21,6 @@ const replaceTagToSchema = (html, schema) => {
 const render = async (req, res, next) => {
   const { data } = await axios.get("http://localhost:8080");
 
-  console.log(data);
-
-  let html = fs.readFileSync(path.resolve(`./teste.html`), "utf8");
-
-  //   console.log(typeof html);
-
   res.send(data.replace(`<span class="vai"></span>`, "kkkkk"));
   next();
 };
@@ -34,8 +28,7 @@ const render = async (req, res, next) => {
 // viewed at http://localhost:8080
 app.get("/", function (req, res) {
   let html = fs.readFileSync(path.resolve(`./index.html`), "utf8");
-  //   let html = fs.readFileSync(path.resolve(`./index.html`), "utf8");
-  //   console.log(html);
+
   res.send(html);
 });
 
