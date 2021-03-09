@@ -1,0 +1,17 @@
+{
+  "name": "node-ssg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn nodemon ./index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "prerender-node": "^3.2.5"
+  }
+}
